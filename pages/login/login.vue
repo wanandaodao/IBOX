@@ -16,7 +16,7 @@
 		
 		<view class="use-other-phone" @click="toLoginElse">其他手机登录</view>
 		
-		<button class="login-button">登录</button>
+		<button class="login-button" @click="login">登录</button>
 		
 		<view class="notice">未注册号码将自动注册账号</view>
 		
@@ -35,6 +35,11 @@
 const toLoginElse = () =>{
 	uni.navigateTo({
 		url:'/pages/register/register'
+	})
+}
+const login = () =>{
+	uni.reLaunch({
+		url:'/pages/home/home'
 	})
 }
 </script>
@@ -100,6 +105,7 @@ const toLoginElse = () =>{
 		font-size: 48rpx;
 		line-height: 40rpx;
 		background: linear-gradient(259.45deg, #57E4FF -4.54%, #8B95F2 26.9%, #8B72EE 49.6%, #8556EA 68.49%, #4138E5 116.24%);
+
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;

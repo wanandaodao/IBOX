@@ -17,6 +17,8 @@
 			<input type="number" placeholder="电话号码"/>
 		</view>
 		
+		
+		<button class="login-button">登录</button>
 	</view>
 </template>
 
@@ -86,6 +88,29 @@
 		top: 774rpx;
 		border: 2rpx solid #EAE9E9;
 		border-radius: 40rpx;
+	}
+	.login-button{
+		position:absolute;
+		top: 1100rpx;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 24rpx 40rpx;
+		gap: 20rpx;
+		
+		width: 638rpx;
+		height: 112rpx;
+	
+		background: linear-gradient(259.45deg, #57E4FF -4.54%, #8B95F2 26.9%, #8B72EE 49.6%, #8556EA 68.49%, #4138E5 116.24%);
+		border-radius: 40rpx;
+		color:white;
+		flex: none;
+		order: 0;
+		flex-grow: 0;
+	
 	}
 }
 </style>
