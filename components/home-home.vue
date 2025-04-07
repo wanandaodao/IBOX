@@ -14,7 +14,7 @@
 				</svg>
 			</view>
 		</view>
-		<scroll-view :style="{ height: `${scrollViewHeight}px` }" scroll-y="true" class="wrap-content">
+		<scroll-view @scroll="scrollHandler" :scroll-into-view="targetId" scroll-with-animation="true" :style="{ height: `${scrollViewHeight}px` }" :scroll-y="scrollY" class="wrap-content">
 			<view class="board-box-wrap">
 				<view class="board-box">
 					<image src="/static/board.png" mode="aspectFill"></image>
@@ -73,16 +73,16 @@
 				</view>
 			</view>
 			
-			<view class="sell-box">
-				<text style="font-size:24rpx;line-height:48rpx;">发售记录</text>
+			<view :id="sellBoxId" class="sell-box">
+				<text style="font-size:24rpx;height:48rpx;display: block;">发售记录</text>
 				
 				<view class="sort-box">
 					<view class="left">
-						<view class="sort-icon-container">
+						<view :class="{choose:sortIndex == 0}" @click="toSellBox" class="sort-icon-container">
 							<text>类别</text>
 							<view class="sort-icon-down"></view>
 						</view>
-						<view class="sort-icon-container">
+						<view @click="sortIndex = 1" :class="{choose:sortIndex == 1}" class="sort-icon-container">
 							<text>售卖状态</text>
 							<view class="sort-icon-down"></view>
 						</view>
@@ -128,21 +128,68 @@
 				
 			</view>
 		</scroll-view>
+		
+		<view v-if="showProp" :style="{ height: `${propHeight}px` }" class="prop">
+			<view class="propBox">
+				<view @click="typeIndex = 0 " :class="{choose:typeIndex == 0}">
+					全部
+				</view>
+				<view @click="typeIndex = 1 " :class="{choose:typeIndex == 1}">
+					盲盒
+				</view>
+				<view @click="typeIndex = 2 " :class="{choose:typeIndex == 2}">
+					藏品
+				</view>
+			</view>
+		</view>
 	</view>
 </template>
 
 <script setup>
 import {ref,onBeforeMount} from 'vue'
 import { onReady } from '@dcloudio/uni-app'
+
+const sellBoxId = ref('sellBox')
+const targetId = ref(null)
+const scrollY = ref(true)
 // 响应式高度变量
 const scrollViewHeight = ref(0)
+const propHeight = ref(0)
+const showProp = ref(false)
+const typeIndex = ref(0)
+const sortIndex = ref(-1)
 // 在组件准备好时执行计算
 onBeforeMount(() => {
 	const systemInfo = uni.getSystemInfoSync()
 	const windowHeight = systemInfo.windowHeight
 	const subtractHeight = uni.upx2px(376)
+	const other = uni.upx2px(325)
 	scrollViewHeight.value = windowHeight - subtractHeight
+	propHeight.value = windowHeight-other
 })
+
+const toSellBox = () =>{
+	sortIndex.value = 0
+	//关闭弹出层的时候不需要滚动
+	if(!showProp.value){
+		targetId.value = sellBoxId.value
+	}
+	 // 2. 重置（可选：确保下次点击仍能触发）
+	setTimeout(() => {
+	    targetId.value = null
+	}, 300);
+	if(!showProp.value){
+		setTimeout(() => {
+		    showProp.value = true
+			scrollY.value = false
+		}, 300);
+	}
+	else{
+		showProp.value = false;
+		scrollY.value = true;
+		sortIndex.value = -1
+	}
+}
 </script>
 
 <style lang="scss" scoped>
@@ -152,6 +199,35 @@ onBeforeMount(() => {
 	.status_bar{
 		width: 100%;
 		height: 88rpx;
+	}
+	.prop{
+		width: 100%;
+		position: absolute;
+		top: 325rpx;
+		background-color: rgba(0,0,0,.5);
+		z-index: 100;
+		.propBox{
+			width: 100%;
+			height: 210rpx;
+			top: 325rpx;
+			border-radius: 0 0 40rpx 40rpx;
+			background-color: rgb(250, 247, 250);
+			z-index: 1000;
+			overflow: hidden;
+			.choose{
+				background-color: #fff;
+				color:rgb(161, 184, 243);
+				font-weight: bold;
+			}
+			view{
+				width: 100%;
+				height: 70rpx;
+				line-height: 70rpx;
+				box-sizing: border-box;
+				padding: 0 40rpx;
+				font-size:24rpx
+			}
+		}
 	}
 	.head{
 		width: 100%;
@@ -269,11 +345,26 @@ onBeforeMount(() => {
 					align-items: center;
 					flex-direction: row;
 					justify-content: space-between;
-					border-radius: 12rpx;
+					border-radius: 20rpx;
 					gap: 10rpx;
 					text{
 						font-size:14rpx;
 						color:#565656
+					}
+				}
+				.choose{
+					background-color: rgb(231, 233, 254);
+					text{
+						font-weight: bold;
+						color:rgb(161, 184, 243)
+					}
+					.sort-icon-down{
+						width: 0;
+						height: 0;
+						border-top: rgb(161, 184, 243) solid 8rpx;
+						border-left: transparent solid 6rpx;
+						border-right: transparent solid 6rpx;
+						border-bottom: transparent solid 0rpx;
 					}
 				}
 				.left{
