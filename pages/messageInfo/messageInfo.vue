@@ -1,14 +1,16 @@
 <template>
 	<view class="content">
+		<view class="status-bars"></view>
 		<view class="header">
 			<view class="left">
 				<view class="back-icon" @click="goBack">
 					<!-- 这里预留svg图标位置 -->
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd"
 							d="M14.1424 18.5863C14.5028 19.0909 15.2014 19.142 15.6241 18.6947L15.7116 18.602C16.0519 18.2418 16.0964 17.6739 15.8166 17.2593L11.4882 11.9671L15.8165 6.74074C16.0963 6.32615 16.0519 5.75822 15.7115 5.39795L15.624 5.30529C15.2014 4.85796 14.5028 4.90906 14.1423 5.41367L9.19925 11.3385C8.93359 11.7104 8.93358 12.2239 9.19925 12.5958L14.1424 18.5863Z"
 							fill="#171718" />
-					</svg>
+					</svg> -->
+					<image src="/static/arrow-left.png" mode="" />
 				</view>
 			</view>
 			<view class="center">
@@ -44,6 +46,10 @@ const goBack = () => {
 
 <style lang="scss" scoped>
 .content {
+	.status-bars{
+		height:88rpx;
+		width: 100%;
+	}
 	width: 100%;
 	height: 100vh;
 	background-color: #fff;
@@ -70,6 +76,10 @@ const goBack = () => {
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				image{
+					width: 48rpx;
+					height: 48rpx;
+				}
 			}
 		}
 		

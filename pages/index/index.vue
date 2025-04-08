@@ -57,7 +57,7 @@ const toLogin = () =>{
 			transform: rotate(-156.63deg);
 			background-size: cover;
 			bottom: 0;
-			right: 5%;
+			right: 70rpx;
 		}
 	}
 	.welcome-box{

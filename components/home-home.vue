@@ -3,34 +3,35 @@
 		<view class="status_bar"></view>
 		<view class="head">
 			<view class="left">
-				<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<!-- <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd"
 						d="M13.7602 13.9982C12.5645 15.1354 10.9471 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667C15.8333 10.9471 15.1354 12.5645 13.9982 13.7602C14.7077 13.8187 15.3767 14.1267 15.8839 14.6339L17.2727 16.0227C17.4182 16.1682 17.5 16.3656 17.5 16.5714V16.6161C17.5 16.6631 17.5 16.6865 17.4991 16.7064C17.4786 17.1354 17.1354 17.4786 16.7064 17.4991C16.6865 17.5 16.6631 17.5 16.6161 17.5H16.5714C16.3656 17.5 16.1682 17.4182 16.0227 17.2727L14.6339 15.8839C14.1267 15.3767 13.8187 14.7077 13.7602 13.9982ZM14.1667 9.16667C14.1667 11.9281 11.9281 14.1667 9.16667 14.1667C6.40524 14.1667 4.16667 11.9281 4.16667 9.16667C4.16667 6.40524 6.40524 4.16667 9.16667 4.16667C11.9281 4.16667 14.1667 6.40524 14.1667 9.16667Z"
 						fill="#C7C7C7" />
-				</svg>
+				</svg> -->
+				<image src="/static/Search.png" mode="" />
 				<input type="text" placeholder="搜索商品" />
 			</view>
 			<view @click="toMessage" class="right">
-				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd"
 						d="M20.8018 17.1316C20.6104 17.6724 20.1395 18.0868 19.5483 18.2096C18.3079 18.4675 17.0563 18.661 15.7992 18.7902C15.1017 20.1005 13.6624 21 12 21C10.3377 21 8.89837 20.1005 8.20088 18.7902C6.94368 18.661 5.69209 18.4675 4.45169 18.2096C3.86056 18.0868 3.38965 17.6724 3.19822 17.1316C2.73584 15.8252 3.09686 14.3849 4.13077 13.4112L4.74318 12.8344C5.29501 12.3147 5.52549 11.5605 5.3562 10.8431C4.41055 6.83532 7.64077 2.99997 12 2.99997C16.3593 2.99997 19.5895 6.83532 18.6438 10.8431C18.4745 11.5605 18.705 12.3147 19.2568 12.8344L19.8693 13.4112C20.9032 14.3849 21.2642 15.8252 20.8018 17.1316ZM17.7552 14.2486L18.3676 14.8254C18.7827 15.2163 18.9567 15.7743 18.8416 16.3075C14.3311 17.2106 9.66898 17.2106 5.15845 16.3075C5.04333 15.7743 5.21735 15.2163 5.63239 14.8254L6.2448 14.2486C7.31393 13.2417 7.75484 11.7891 7.42924 10.4092C6.77477 7.6355 9.0156 4.99997 12 4.99997C14.9844 4.99997 17.2253 7.6355 16.5708 10.4092C16.2452 11.7891 16.6861 13.2417 17.7552 14.2486Z"
 						fill="#171718" />
-				</svg>
+				</svg> -->
+				<image src="/static/notice.png" mode="" />
 			</view>
 		</view>
-		<scroll-view @scroll="scrollHandler" :scroll-into-view="targetId" scroll-with-animation="true"
-			:style="{ height: `${scrollViewHeight}px` }" :scroll-y="scrollY" class="wrap-content">
+		<scroll-view :show-scrollbar="false" @scroll="scrollHandler" :scroll-into-view="targetId" scroll-with-animation="true"
+			:style="{ height: `${scrollViewHeight}px` }" :scroll-y="scrollY" class="wrap-content" >
 			<view class="board-box-wrap">
 				<view class="board-box">
-					<image src="/static/board.png" mode="aspectFill"></image>
+					<image @click="toAnnouncementInfo" src="/static/board.png" mode="aspectFill"></image>
 					<view class="text-box">
 						<view class="left">
 							<text>公告</text>
 							<text>携手iZen数字原生，共赴蛇年数藏新盛宴！</text>
 						</view>
 						<view class="right">
-
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+							<!-- <svg @click="toAnnouncement" width="24" height="24" viewBox="0 0 24 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M9 8C10.6569 8 11 7.55228 11 7C11 6.44772 10.6569 6 9 6L5 6C3.34315 6 3 6.44772 3 7C3 7.55228 3.34315 8 5 8L9 8Z"
@@ -41,8 +42,8 @@
 								<path
 									d="M21 17C21 17.5523 20.6569 18 19 18L5 18C3.34315 18 3 17.5523 3 17C3 16.4477 3.34315 16 5 16L19 16C20.6569 16 21 16.4477 21 17Z"
 									fill="#171718" />
-							</svg>
-
+							</svg> -->
+							<image @click="toAnnouncement" src="/static/sideBar.png" mode="aspectFit" />
 						</view>
 					</view>
 				</view>
@@ -80,7 +81,7 @@
 							<image src="/static/board.png" mode="aspectFill"></image>
 						</swiper-item>
 						<swiper-item>
-							<image src="/static/board.png" mode="aspectFill"></image>
+							<image src="/static/activity.png" mode="aspectFill"></image>
 						</swiper-item>
 						<swiper-item>
 							<image src="/static/board.png" mode="aspectFill"></image>
@@ -284,6 +285,16 @@ const toMessage = () => {
 		url: '/pages/message/message'
 	})
 }
+const toAnnouncement = () =>{
+	uni.navigateTo({
+		url:'/pages/announcement/announcement'
+	})
+}
+const toAnnouncementInfo = () =>{
+	uni.navigateTo({
+		url:'/pages/announcementInfo/announcementInfo'
+	})
+}
 </script>
 
 <style lang="scss" scoped>
@@ -346,7 +357,7 @@ const toMessage = () => {
 			display: flex;
 			align-items: center;
 			padding: 0 40rpx;
-			svg {
+			image{
 				width: 40rpx;
 				height: 40rpx;
 				margin-right: 40rpx;
@@ -361,6 +372,10 @@ const toMessage = () => {
 			align-items: center;
 			border: 1px solid #eae9e9;
 			border-radius: 50%;
+			image{
+				width: 48rpx;
+				height: 48rpx;
+			}
 		}
 	}
 

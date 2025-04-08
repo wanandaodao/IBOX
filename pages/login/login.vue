@@ -47,7 +47,7 @@ const login = () =>{
 <style lang="scss" scoped>
 .content{
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	.status_bar {
 	    height: 88rpx;
 	    width: 100%;

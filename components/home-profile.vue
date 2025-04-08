@@ -1,5 +1,6 @@
 <template>
   <view class="profile-container">
+    <view class="status-bars"></view>
     <!-- 顶部用户信息区域 -->
     <view class="user-info">
       <view class="avatar-section">
@@ -125,7 +126,10 @@ export default {
 <style lang="scss" scoped>
 .profile-container {
   background: linear-gradient(180deg, #4B6CFF 0%, #4B6CFF 30%, #F5F5F5 30%);
-  
+  .status-bars{
+    width: 100%;
+    height: 88rpx;
+  }
   .user-info {
     padding: 20rpx;
     

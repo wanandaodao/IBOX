@@ -1,7 +1,9 @@
 <template>
   <view class="profile-container">
+    <view class="status-bars"></view>
     <!-- 顶部用户信息区域 -->
     <view class="user-info">
+
       <view class="avatar-section">
         <image class="avatar" src="/static/avatar.png" mode="aspectFill"></image>
         <view class="user-detail">
@@ -126,10 +128,12 @@ export default {
 .profile-container {
   min-height: 100vh;
   background: linear-gradient(180deg, #4B6CFF 0%, #4B6CFF 30%, #F5F5F5 30%);
-  
+  .status-bars{
+    height: 88rpx;
+    width: 100%;
+  }
   .user-info {
     padding: 20rpx;
-    
     .avatar-section {
       display: flex;
       align-items: center;
