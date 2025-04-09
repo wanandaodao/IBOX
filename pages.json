@@ -35,13 +35,6 @@
 			}
 		},
 		{
-			"path" : "pages/profile/index",
-			"style" : 
-			{
-				"navigationBarTitleText" : ""
-			}
-		},
-		{
 			"path" : "pages/message/message",
 			"style" : 
 			{
@@ -64,6 +57,20 @@
 		},
 		{
 			"path" : "pages/announcementInfo/announcementInfo",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/profile/profile",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/lottery/lottery",
 			"style" : 
 			{
 				"navigationBarTitleText" : ""

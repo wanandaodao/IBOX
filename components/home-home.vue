@@ -31,18 +31,7 @@
 							<text>携手iZen数字原生，共赴蛇年数藏新盛宴！</text>
 						</view>
 						<view class="right">
-							<!-- <svg @click="toAnnouncement" width="24" height="24" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M9 8C10.6569 8 11 7.55228 11 7C11 6.44772 10.6569 6 9 6L5 6C3.34315 6 3 6.44772 3 7C3 7.55228 3.34315 8 5 8L9 8Z"
-									fill="#171718" />
-								<path
-									d="M13 13C14.6569 13 15 12.5523 15 12C15 11.4477 14.6569 11 13 11H5C3.34315 11 3 11.4477 3 12C3 12.5523 3.34315 13 5 13H13Z"
-									fill="#171718" />
-								<path
-									d="M21 17C21 17.5523 20.6569 18 19 18L5 18C3.34315 18 3 17.5523 3 17C3 16.4477 3.34315 16 5 16L19 16C20.6569 16 21 16.4477 21 17Z"
-									fill="#171718" />
-							</svg> -->
+							
 							<image @click="toAnnouncement" src="/static/sideBar.png" mode="aspectFit" />
 						</view>
 					</view>
@@ -55,7 +44,7 @@
 						<image src="/static/activity.png"></image>
 						<view>合成中心</view>
 					</view>
-					<view class="activity-list">
+					<view @click="toLottery" class="activity-list">
 						<image src="/static/activity.png"></image>
 						<view>抽奖活动</view>
 					</view>
@@ -293,6 +282,11 @@ const toAnnouncement = () =>{
 const toAnnouncementInfo = () =>{
 	uni.navigateTo({
 		url:'/pages/announcementInfo/announcementInfo'
+	})
+}
+const toLottery = () =>{
+	uni.navigateTo({
+		url:'/pages/lottery/lottery'
 	})
 }
 </script>
