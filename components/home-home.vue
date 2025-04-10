@@ -52,11 +52,11 @@
 						<image src="/static/activity.png"></image>
 						<view>龙晶</view>
 					</view>
-					<view class="activity-list">
+					<view @click="toCustomerService" class="activity-list">
 						<image src="/static/activity.png"></image>
 						<view>在线客服</view>
 					</view>
-					<view class="activity-list">
+					<view @click="toSafeCenter" class="activity-list">
 						<image src="/static/activity.png"></image>
 						<view>识别码</view>
 					</view>
@@ -289,6 +289,17 @@ const toLottery = () =>{
 		url:'/pages/lottery/lottery'
 	})
 }
+const toCustomerService = () =>{
+	uni.navigateTo({
+		url:'/pages/customerService/customerService'
+	})
+}
+const toSafeCenter = () =>{
+	uni.navigateTo({
+		url:'/pages/safeCenter/safeCenter'
+	})
+}
+
 </script>
 
 <style lang="scss" scoped>
