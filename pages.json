@@ -1,0 +1,157 @@
+{
+	"pages": [ 
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/login/login",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/register/register",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/createpocket/createpocket",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/home/home",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/message/message",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/messageInfo/messageInfo",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/announcement/announcement",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/announcementInfo/announcementInfo",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/profile/profile",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/lottery/lottery",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/mine/setting/mainsetting",
+			"style" : 
+			{
+				"navigationBarTitleText" : "设置中心"
+			}
+		},
+		{
+			"path" : "pages/mine/box-record",
+			"style" : 
+			{
+				"navigationBarTitleText" : "开盒记录"
+			}
+		},
+		{
+			"path" : "pages/mine/order",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的订单"
+			}
+		},
+		{
+			"path" : "pages/mine/order-search",
+			"style" : 
+			{
+				"navigationBarTitleText" : "订单搜索"
+			}
+		},
+		{
+			"path" : "pages/mine/setting/personal-info",
+			"style" : 
+			{
+				"navigationBarTitleText" : "个人信息"
+			}
+		},
+		{
+			"path" : "pages/mine/setting/privacy",
+			"style" : 
+			{
+				"navigationBarTitleText" : "隐私设置"
+			}
+		},
+		{
+			"path" : "pages/mine/setting/about",
+			"style" : 
+			{
+				"navigationBarTitleText" : "关于我们"
+			}
+		},
+		{
+			"path" : "pages/mine/setting/privacypolicy",
+			"style" : 
+			{
+				"navigationBarTitleText" : "隐私政策"
+			}
+		},
+		{
+			"path" : "pages/mine/setting/address-edit",
+			"style" : 
+			{
+				"navigationBarTitleText" : "收货地址管理"
+			}
+		},
+		{
+			"path" : "pages/mine/setting/nickname-edit",
+			"style" : 
+			{
+				"navigationBarTitleText" : "修改昵称"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom"
+	}
+}

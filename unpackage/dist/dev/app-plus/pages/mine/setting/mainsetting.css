@@ -1,0 +1,166 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.setting-container {
+  min-height: 100vh;
+  background-color: #f6f6f6;
+  padding-bottom: 0.9375rem;
+}
+.setting-container .status-bar-height {
+  height: 44px;
+  /* iOS状态栏高度 */
+  width: 100%;
+  background-color: #fff;
+}
+.setting-container .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.setting-container .header .back-icon {
+  width: 24px;
+  height: 24px;
+}
+.setting-container .header .back-icon uni-image {
+  width: 100%;
+  height: 100%;
+}
+.setting-container .header .title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.setting-container .header .placeholder {
+  width: 24px;
+  height: 24px;
+}
+.setting-container .setting-list {
+  margin-top: 0;
+}
+.setting-container .setting-list .setting-group {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0.625rem;
+  overflow: hidden;
+}
+.setting-container .setting-list .setting-group + .setting-group {
+  margin-top: 0.625rem;
+}
+.setting-container .setting-list .setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9375rem;
+  position: relative;
+}
+.setting-container .setting-list .setting-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0.9375rem;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #f0f0f0;
+}
+.setting-container .setting-list .setting-item .item-left {
+  display: flex;
+  align-items: center;
+}
+.setting-container .setting-list .setting-item .item-left .icon-box {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  color: #4B6CFF;
+  background: rgba(75, 108, 255, 0.1);
+  border-radius: 50%;
+}
+.setting-container .setting-list .setting-item .item-left uni-text {
+  font-size: 0.875rem;
+  color: #333;
+}
+.setting-container .setting-list .setting-item .item-right {
+  display: flex;
+  align-items: center;
+}
+.setting-container .setting-list .setting-item .item-right .status-text {
+  font-size: 0.75rem;
+  margin-right: 0.3125rem;
+}
+.setting-container .setting-list .setting-item .item-right .status-text.unverified {
+  color: #ff5a5a;
+}
+.setting-container .setting-list .setting-item .item-right .version-text {
+  font-size: 0.75rem;
+  color: #999;
+  margin-right: 0.3125rem;
+}
+.setting-container .setting-list .setting-item .arrow {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 0.0625rem solid #ccc;
+  border-right: 0.0625rem solid #ccc;
+  transform: rotate(45deg);
+}
+.setting-container .profile-icon::before {
+  content: "👤";
+}
+.setting-container .verify-icon::before {
+  content: "✓";
+}
+.setting-container .privacy-icon::before {
+  content: "🔒";
+}
+.setting-container .security-icon::before {
+  content: "🛡️";
+}
+.setting-container .invoice-icon::before {
+  content: "📄";
+}
+.setting-container .help-icon::before {
+  content: "❓";
+}
+.setting-container .update-icon::before {
+  content: "↻";
+}
+.setting-container .about-icon::before {
+  content: "ℹ️";
+}
+.setting-container .privacy-policy-icon::before {
+  content: "📋";
+}
+.setting-container .deactivate-icon::before {
+  content: "⛔";
+}
+.setting-container .logout-icon::before {
+  content: "↪";
+}
